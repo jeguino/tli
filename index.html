@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página Web</title>
+    <title>Abogado en Informática y Tecnologías Legales Inteligentes</title>
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,8 +28,34 @@
             padding: 2rem;
             text-align: center;
         }
+        h1 {
+            margin-bottom: 0.5rem;
+        }
+        nav {
+            margin-top: 1.5rem;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 0.75rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        nav a:hover,
+        nav a:focus {
+            background: #465d73;
+        }
         main {
             max-width: 800px;
+            width: calc(100% - 2rem);
             margin: 2rem auto;
             padding: 2rem;
             background: #fff;
@@ -34,8 +63,16 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             flex: 1;
         }
-        h1 {
-            margin-bottom: 0.5rem;
+        section {
+            scroll-margin-top: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        section:last-child {
+            margin-bottom: 0;
+        }
+        h2 {
+            color: #2b3a4a;
+            margin-bottom: 0.75rem;
         }
         p {
             margin-bottom: 1rem;
@@ -49,7 +86,8 @@
             border-radius: 5px;
             transition: background 0.3s ease;
         }
-        .btn:hover {
+        .btn:hover,
+        .btn:focus {
             background: #0056b3;
         }
         footer {
@@ -59,19 +97,50 @@
             color: #fff;
             margin-top: auto;
         }
+        footer p {
+            margin-bottom: 0;
+        }
+        @media (max-width: 480px) {
+            header,
+            main {
+                padding: 1.25rem;
+            }
+            nav ul {
+                gap: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>¡Bienvenido a mi sitio web!</h1>
-        <p>Creado y alojado gracias a GitHub Pages</p>
+        <p>Abogado en Informática y Tecnologías Legales Inteligentes</p>
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="#quien-soy">Quien Soy</a></li>
+                <li><a href="#experticia">Experticia</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h2>Sobre mí</h2>
-        <p>Esta es mi primera página web. Aquí puedo compartir mis proyectos, ideas o portafolio personal.</p>
-        <a href="#" class="btn">Saber más</a>
+        <section id="quien-soy">
+            <h2>Quien Soy</h2>
+            <p>Esta es mi primera página web. Aquí puedo compartir mis proyectos, ideas o portafolio personal.</p>
+            <a href="#experticia" class="btn">Conoce mi experticia</a>
+        </section>
+
+        <section id="experticia">
+            <h2>Experticia</h2>
+            <p>Asesoría jurídica en informática, tecnología y soluciones legales inteligentes.</p>
+        </section>
+
+        <section id="ubicacion">
+            <h2>Ubicación</h2>
+            <p>Próximamente encontrarás aquí información sobre mi ubicación y formas de contacto.</p>
+        </section>
     </main>
 
     <footer>
